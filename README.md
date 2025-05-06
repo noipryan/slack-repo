@@ -2,7 +2,6 @@
 
 A DNF/YUM repository for installing Slack on RHEL, CentOS, and Fedora Linux.
 
-You can use the slack-repo RPM from [Copr](https://copr.fedorainfracloud.org/coprs/jdoss/slack-repo/) or you can drop the slack.repo file from this repository into `/etc/yum.repos.d` to enable it. From there, you can run `sudo dnf install slack` or `sudo yum install slack` to install the Slack for Linux client from Slack's [packagecloud](https://packagecloud.io/slacktechnologies/slack/) yum repository to enjoy automatic GPG verified RPM package updates.
 
 ### Why should I use this repository?
 
@@ -13,12 +12,11 @@ TL;DR: Having automatic Slack for Linux package updates and verifying the GPG si
 ### Quick start
 
 
-#### Copr Install
-
+#### DNF Install
 ```
-sudo dnf copr enable jdoss/slack-repo
-sudo dnf install slack-repo
+sudo dnf config-manager addrepo --from-repofile='https://raw.githubusercontent.com/noipryan/slack-repo/refs/heads/master/slack.repo'
 sudo dnf install slack
+
 ```
 
 #### Manual Install
